@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+h1::before{
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+#input {
+  text-align: center;
+}
+
+#button {
+  margin-left: 0px;
+  text-align: left;
+}
+
+#button1:hover {
+  background-color: #f190e4;
+  color: rgb(56, 14, 85);
+  cursor: pointer;
+}
+
+#m {
+  text-align: right;
+  margin-right: 0px;
+}
+
+#search_box input {
+    outline: none;
+  border: none;
+  border-radius: 40px;
+  padding: 10px;
+  width: 100%;
+  color: black;
+}
+
+input:focus {
+  box-shadow: 0 0 5px orange;
+  border: 1px solid orange;
+}
+
+#search_box i {
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    margin-left: 40px;
+    width: 150px;
+    background-color: #112a6e;
+    cursor: pointer;
+    color: white;
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgrey;
+    cursor: pointer;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+}
