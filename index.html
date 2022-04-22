@@ -11,17 +11,6 @@
     <div class="container">
         <h1>Welcome to the Harvard Art Museum</h1>
     </div>
-    <div class="container">
-        <div class="row">
-          <div class="col-sm" id="m">
-            <div id="search_box">
-              <input id="input" type="search" placeholder="Enter pic's name.."><i id="search" class="fas fa-search"></i>
-            </div>
-          </div>
-          <div class="col-sm" id="button">
-            <button type="button" class="btn btn-primary" id="button1"><b>SEARCH</b></button>
-          </div>
-        </div>
     
     <divc class="photo-gallery">
         <div class="pic1">
@@ -37,6 +26,17 @@
             <img src="./pic4.png" alt="error">
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm" id="m">
+            <div id="search_box">
+              <input id="input" type="search" placeholder="Enter pic's name.."><i id="search" class="fas fa-search"></i>
+            </div>
+          </div>
+          <div class="col-sm" id="button">
+            <button type="button" class="btn btn-primary" id="button1"><b>SEARCH</b></button>
+          </div>
+        </div>
     <script>
         document.querySelector("#input").addEventListener("keydown", (event) => {
           if (event.key == "Enter")
