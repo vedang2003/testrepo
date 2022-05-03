@@ -37,46 +37,28 @@
             <button type="button" class="btn btn-primary" id="button1"><b>SEARCH</b></button>
           </div>
         </div>
+        
+    <!------JavaScript for Toggle Menu------->
+
     <script>
-        document.querySelector("#input").addEventListener("keydown", (event) => {
-          if (event.key == "Enter")
-            apiRequest();
-        });
-      
-        document.querySelector("#search").addEventListener("click", () => {
-          apiRequest();
-        });
-      var inputvalue=document.querySelector('#input');
-        apiRequest = () => {
-      
-          document.querySelector("#grid").textContent = "";
-      
-          const url = 'https://api.harvardartmuseums.org/exhibition?venue=HAM'+inputvalue.value+'&per_page=4&apikey=b972cf79-f079-4d93-8e38-be4663a2e3f5';
-      
-          fetch(url)
-      
-            .then(response => {
-              if (!response.ok) throw Error(response.statusText);
-              return response.json();
-            })
-      
-            .then(data => {
-              loadImages(data);
-              console.log(data);
-            })
-            .catch(error => console.log(error));
-        }
-      
-          loadImages = (data) => {
-          for (let i = 0; i < data.results.length; i++) {
-            let image = document.createElement("div");
-            image.className = "img";
-            image.style.backgroundImage = "url(" + data.results[i].urls.raw + "&w=1366&h=768" + ")";
-            image.addEventListener("dblclick", function () {
-              window.open(data.results[i].links.download, '_blank');
-            })
-            document.querySelector("#grid").appendChild(image);
-          }
-        }
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        console.log("abc");
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="api.js"></script>
 </body>
 </html>
